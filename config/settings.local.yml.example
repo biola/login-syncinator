@@ -1,0 +1,6 @@
+login:
+  db_connection_string: # set in settings.local.yml
+
+trogdir:
+  access_id:
+  secret_key:
