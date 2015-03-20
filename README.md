@@ -12,6 +12,7 @@ Requirements
 - trogdir-api installation
 
 Installation
+------------
 ```bash
 git clone git@github.com:biola/login-syncinator.git
 cd login-syncinator
