@@ -32,6 +32,7 @@ module Workers
         end
       rescue StandardError => err
         TrogdirChangeErrorWorker.perform_async(sync_log_id, err.message)
+        Raven.capture_exception(err) if defined? Raven
       end
     end
   end
