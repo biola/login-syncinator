@@ -1,6 +1,9 @@
 login:
   db_connection_string: # set in settings.local.yml
 
+sentry:
+  url:
+
 trogdir:
   access_id:
   secret_key:

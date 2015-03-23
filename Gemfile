@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'blazing'
-gem 'mail'
 # Fixes this issue https://github.com/mongoid/moped/issues/345
 gem 'moped', '2.0.4', github: 'wandenberg/moped', branch: 'operation_timeout'
 gem 'mysql2'
 # beta1 fixes this issue https://github.com/railsconfig/rails_config/pull/86
 gem 'rails_config', '~> 0.5.0.beta1'
+gem 'rake'
 gem 'sequel'
 gem 'sidekiq'
 gem 'sidetiq'
@@ -20,5 +20,5 @@ group :development, :test do
 end
 
 group :production do
-  gem 'exception_notification'
+  gem 'sentry-raven'
 end
