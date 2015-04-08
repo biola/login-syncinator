@@ -1,5 +1,8 @@
 login:
-  db_connection_string: # set in settings.local.yml
+  db:
+    host: db.example.com
+    user: login
+    password: "************"
 
 sentry:
   url:

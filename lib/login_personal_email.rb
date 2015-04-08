@@ -2,7 +2,7 @@ class LoginPersonalEmail
   attr_reader :netid
 
   NETID_SANITIZER = /[^a-z0-9]/i
-  DB = Sequel.connect(Settings.login.db_connection_string)
+  DB = Sequel.connect(Settings.login.db.to_hash)
 
   def initialize(netid)
     @netid = netid.gsub(NETID_SANITIZER, '')
