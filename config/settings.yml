@@ -1,5 +1,11 @@
 login:
-  db_connection_string: # set in settings.local.yml
+  db:
+    adapter: mysql2
+    host: # set in settings.local.yml
+    database: login
+    user: # set in settings.local.yml
+    password: # set in settings.local.yml
+    reconnect: true
 
 redis:
   url: "redis://localhost:6379/0"
