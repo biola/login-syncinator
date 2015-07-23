@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'blazing'
 # Fixes this issue https://github.com/mongoid/moped/issues/345
-gem 'moped', '2.0.4', github: 'wandenberg/moped', branch: 'operation_timeout'
+gem 'moped', '2.0.4', git: 'https://github.com/wandenberg/moped', branch: 'operation_timeout'
 gem 'mysql2'
 # beta1 fixes this issue https://github.com/railsconfig/rails_config/pull/86
 gem 'rails_config', '~> 0.5.0.beta1'
