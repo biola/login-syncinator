@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/wandenberg/moped.git
-  revision: 4807c92f85cd97f4519fe0d6667c12ff9588ff60
+  remote: https://github.com/wandenberg/moped
+  revision: 470224c0361f21112d1a988982af2702f73d9eb2
   branch: operation_timeout
   specs:
     moped (2.0.4)
@@ -135,3 +135,6 @@ DEPENDENCIES
   sidekiq
   sidetiq
   trogdir_api_client
+
+BUNDLED WITH
+   1.10.5
