@@ -135,6 +135,3 @@ DEPENDENCIES
   sidekiq
   sidetiq
   trogdir_api_client
-
-BUNDLED WITH
-   1.10.5
