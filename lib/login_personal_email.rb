@@ -20,6 +20,10 @@ class LoginPersonalEmail
     DB[:personalemail].insert(netid: netid, email: personal_email)
   end
 
+  def update!(personal_email)
+    DB[:personalemail].where(netid: netid).update(email: personal_email)
+  end
+
   private
 
   def record

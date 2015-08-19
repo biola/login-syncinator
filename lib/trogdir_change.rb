@@ -16,6 +16,10 @@ class TrogdirChange
     hash['action'] == 'create'
   end
 
+  def update?
+    hash['action'] == 'update'
+  end
+
   def personal_email?
     scope == 'email' && type == 'personal'
   end

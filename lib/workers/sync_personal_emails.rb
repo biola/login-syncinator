@@ -21,7 +21,7 @@ module Workers
       # Keep processing batches until we run out
       if changes.any?
         changes.each do |change|
-          if change.create? && (change.personal_email? || change.netid?)
+          if (change.create? || change.update?) && (change.personal_email? || change.netid?)
             SyncPersonalEmail.perform_async(change.sync_log_id, change.person_uuid)
           else
             TrogdirChangeFinishWorker.perform_async(change.sync_log_id, :skip)
