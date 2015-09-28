@@ -31,7 +31,7 @@ GEM
     celluloid (0.16.0)
       timers (~> 4.0.0)
     coderay (1.1.0)
-    connection_pool (2.1.2)
+    connection_pool (2.2.0)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
     faraday (0.9.1)
@@ -135,3 +135,6 @@ DEPENDENCIES
   sidekiq
   sidetiq
   trogdir_api_client
+
+BUNDLED WITH
+   1.10.6
