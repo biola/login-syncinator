@@ -1,5 +1,6 @@
 class TrogdirChangeErrorWorker
   include Sidekiq::Worker
+  sidekiq_options retry: false
 
   def perform(sync_log_id, message)
     response = trogdir.error(sync_log_id: sync_log_id, message: message).perform

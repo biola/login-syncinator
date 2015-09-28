@@ -1,5 +1,6 @@
 class TrogdirChangeFinishWorker
   include Sidekiq::Worker
+  sidekiq_options retry: false
 
   def perform(sync_log_id, action_taken)
     response = trogdir.finish(sync_log_id: sync_log_id, action: action_taken).perform
