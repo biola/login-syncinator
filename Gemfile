@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'blazing'
 # Fixes this issue https://github.com/mongoid/moped/issues/345
 gem 'moped', '2.0.4', git: 'https://github.com/wandenberg/moped', branch: 'operation_timeout'
 gem 'mysql2'
@@ -9,7 +8,7 @@ gem 'rails_config', '~> 0.5.0.beta1'
 gem 'rake'
 gem 'sequel'
 gem 'sidekiq'
-gem 'sidetiq'
+gem 'sidekiq-cron'
 gem 'trogdir_api_client'
 
 group :development, :test do
