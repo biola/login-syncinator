@@ -7,11 +7,25 @@ module Workers
     sidekiq_options retry: false
 
     def perform
-      response = change_syncs.start.perform
-      raise TrogdirAPIError, response.parse['error'] unless response.success?
+      Log.info "[#{jid}] Starting job for Login Syncinator"
 
-      hashes = Array(response.parse)
+      hashes = []
+      response = []
+
+      begin
+        loop do
+          response = change_syncs.start(limit: 10).perform
+          break if response.parse.blank?
+          raise TrogdirAPIError, response.parse['error'] unless response.success?
+
+          hashes += Array(response.parse)
+        end
+      rescue StandardError => error
+          Log.error "Error in SyncPersonalEmails: #{error.message}"
+      end
+
       changes = hashes.map { | hash| TrogdirChange.new(hash) }
+
 
       # Keep processing batches until we run out
       if changes.any?
