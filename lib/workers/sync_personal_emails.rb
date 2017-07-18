@@ -15,7 +15,7 @@ module Workers
       begin
         loop do
           response = change_syncs.start(limit: 10).perform
-          break if response.parse.blank?
+          break if response.parse.empty?
           raise TrogdirAPIError, response.parse['error'] unless response.success?
 
           hashes += Array(response.parse)
