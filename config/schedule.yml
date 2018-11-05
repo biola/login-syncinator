@@ -2,7 +2,8 @@
 ########## Changes ###########
 ##############################
 
-SyncPersonalEmails:
-  cron: "0 08-20 * * 1-5"
-  class: "Workers::SyncPersonalEmails"
-  queue: default
+{}
+# SyncPersonalEmails:
+#   cron: "0 08-20 * * 1-5"
+#   class: "Workers::SyncPersonalEmails"
+#   queue: default
